@@ -75,12 +75,20 @@
     <Content Include="App_Data\SocialMedia_log.ldf">
       <DependentUpon>SocialMedia.mdf</DependentUpon>
     </Content>
+    <Content Include="home.aspx" />
     <Content Include="login.aspx" />
     <Content Include="Registration.aspx" />
     <Content Include="styles.css" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="home.aspx.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="home.aspx.designer.cs">
+      <DependentUpon>home.aspx</DependentUpon>
+    </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
