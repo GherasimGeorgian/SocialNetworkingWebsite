@@ -24,7 +24,7 @@
     </style>
 </head>
 <body>
-    <form id="form1" runat="server">
+    <form id="form1" runat="server" class="pure-form">
         <div id="headWrap">
             <div id="headpanel">
                 <div id="logo">
@@ -105,7 +105,7 @@
                         <a href="#" class="login">
                     </div>
                     <h2>
-                        <asp:Button ID="Button1" runat="server" Text="login" Font-Bold="True" Font-Names="Comic Sans MS" Font-Size="Large" Width="86px" OnClick="Button1_Click" />
+                        <asp:Button ID="Button1" runat="server" class="pure-button pure-button-primary" Text="login" Font-Bold="True" Font-Names="Comic Sans MS" Font-Size="Large" Width="86px" OnClick="Button1_Click" />
                     </h2>
                 </div>
                
@@ -129,5 +129,7 @@
             </div>
         </div>
     </form>
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
 </body>
 </html>

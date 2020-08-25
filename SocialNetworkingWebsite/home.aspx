@@ -90,59 +90,71 @@
                     <div class="top">
                         &nbsp;<asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Italic="False" ForeColor="#3399FF" Text="WELCOME TO NetworkingSocial" Font-Names="Comic Sans MS"></asp:Label><br />
                         <br />
-                        <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Italic="False"  ForeColor="#3399FF"   Font-Names="Comic Sans MS"></asp:Label>
+                        <asp:Label ID="Label3" runat="server" Font-Bold="True" Font-Italic="False" ForeColor="#3399FF" Font-Names="Comic Sans MS"></asp:Label>
                         <br />
-                         <asp:TextBox ID="TextBox1" runat="server" Height="16px" Width="325px"></asp:TextBox >
-                         &nbsp;<br />
-                        <asp:Button ID="Button1" runat="server" BackColor="#FFFFCC" Font-Bold="False" Font-Size="Smaller" ForeColor="#FF9966" Text="Update" Width="78px" />
-                         &nbsp;
+                        <asp:TextBox ID="TextBox1" runat="server" Height="16px" Width="325px"></asp:TextBox>
+                        &nbsp;<br />
+                        <asp:Button ID="Button1" runat="server" BackColor="#FFFFCC" Font-Bold="False" Font-Size="Smaller" ForeColor="#FF9966" Text="Update" Width="78px" OnClick="Button1_Click" />
+                        &nbsp;
                          <asp:FileUpload ID="FileUpload1" runat="server" />
-                         <br />
-                         <br />
+                        <br />
+                        <br />
                         <asp:Label ID="Label4" runat="server" Font-Bold="True" Font-Names="Comic Sans MS" Text="Profile"></asp:Label>
                         &nbsp;&nbsp;
-                        <asp:Label ID="Label5" runat="server" Font-Bold="True"  Font-Names="Comic Sans MS" Text="Scraps"></asp:Label>
+                        <asp:Label ID="Label5" runat="server" Font-Bold="True" Font-Names="Comic Sans MS" Text="Scraps"></asp:Label>
                         &nbsp;
-                        <asp:Label ID="Label6" runat="server" Font-Bold="True"  Font-Names="Comic Sans MS" Text="Friendz"></asp:Label>
+                        <asp:Label ID="Label6" runat="server" Font-Bold="True" Font-Names="Comic Sans MS" Text="Friendz"></asp:Label>
 
-                        &nbsp;<asp:Label ID="Label9" runat="server" Font-Bold="True" Font-Names="Comic Sans MS"  Text="Testim.."></asp:Label>&nbsp;&nbsp;
-                   <asp:Label ID="Label10" runat="server"  Font-Bold="True" Font-Names="Comic Sans MS" Text="Picz"></asp:Label>
-                   <asp:ImageButton ID="ImageButton4" runat="server" Height="41px"    ImageUrl="~/images/Face_Of_Butterfly.jpg" PostBackUrl="~/profile.aspx"   Width="52px" />
-                    &nbsp;
-                   <asp:ImageButton ID="ImageButton5" runat="server" Height="40px"   ImageUrl="~/images/FerrariAvatar Yellow.png" PostBackUrl="~/scrapbook.aspx"   Width="56px" />
-                    &nbsp;
-                   <asp:ImageButton ID="ImageButton6" runat="server" Height="39px"   ImageUrl="~/images/Skate.jpg" PostBackUrl="~/friendz.aspx" Width="54px" />
-                    &nbsp;
-                   <asp:ImageButton ID="ImageButton7" runat="server" Height="38px"   ImageUrl="~/images/I_Miss_You.jpg" PostBackUrl="~/testimonial.aspx"    Width="55px" />
-                    &nbsp;
-                   <asp:ImageButton ID="ImageButton8" runat="server" Height="37px"   ImageUrl="~/images/Dragon_Fire.jpg" PostBackUrl="~/photo.aspx"   Width="58px" />
-                     &nbsp;
-           <asp:DataList ID="DataList1" runat="server" CssClass="row"  BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black"> 
-            <AlternatingItemStyle BackColor="PaleGoldenrod" />
-                <FooterStyle BackColor="Tan" />
-                <HeaderStyle BackColor="Tan" Font-Bold="True" />
-                <ItemTemplate>  
-                    <div class="row productList">  
-                         
-                        <div class="col-8">  
-                           <%#Eval("email_id")%>  
-                            <h4><%#Eval("postmsg")%></h4>  
-                            
-                        </div> 
-                        <div class="col-4">  
-                            <img alt="" width="250" src='<%#Eval("image_path")%>' />  
-                        </div>  
-                    </div>  
-                </ItemTemplate>  
-                <SelectedItemStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
-           </asp:DataList>  
+                        &nbsp;<asp:Label ID="Label9" runat="server" Font-Bold="True" Font-Names="Comic Sans MS" Text="Testim.."></asp:Label>&nbsp;&nbsp;
+                   <asp:Label ID="Label10" runat="server" Font-Bold="True" Font-Names="Comic Sans MS" Text="Picz"></asp:Label>
+                        <asp:ImageButton ID="ImageButton4" runat="server" Height="41px" ImageUrl="~/images/Face_Of_Butterfly.jpg" PostBackUrl="~/profile.aspx" Width="52px" />
+                        &nbsp;
+                   <asp:ImageButton ID="ImageButton5" runat="server" Height="40px" ImageUrl="~/images/FerrariAvatar Yellow.png" PostBackUrl="~/scrapbook.aspx" Width="56px" />
+                        &nbsp;
+                   <asp:ImageButton ID="ImageButton6" runat="server" Height="39px" ImageUrl="~/images/Skate.jpg" PostBackUrl="~/friendz.aspx" Width="54px" />
+                        &nbsp;
+                   <asp:ImageButton ID="ImageButton7" runat="server" Height="38px" ImageUrl="~/images/I_Miss_You.jpg" PostBackUrl="~/testimonial.aspx" Width="55px" />
+                        &nbsp;
+                   <asp:ImageButton ID="ImageButton8" runat="server" Height="37px" ImageUrl="~/images/Dragon_Fire.jpg" PostBackUrl="~/photo.aspx" Width="58px" />
+                        &nbsp;
+           <asp:DataList ID="DataList1" runat="server" CssClass="row" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" ForeColor="Black">
+               <AlternatingItemStyle BackColor="PaleGoldenrod" />
+               <FooterStyle BackColor="Tan" />
+               <HeaderStyle BackColor="Tan" Font-Bold="True" />
+               <ItemTemplate>
+                   <div class="row productList">
+
+                       <div class="col-8">
+                           <%#Eval("email_id")%>
+                           <h4><%#Eval("postmsg")%></h4>
+
+                       </div>
+                       <div class="col-4">
+                           <img alt="" width="250" src='<%#Eval("image_path")%>' />
+                       </div>
+                   </div>
+               </ItemTemplate>
+               <SelectedItemStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+           </asp:DataList>
                     </div>
                     <br />
-          
+
+
+                </div>
+                <div id="rigtPanel">
+                    &nbsp;<div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;ADVERTISMENT<br />
+                        <br />
+                        <asp:Image ID="Image2" runat="server" Height="197px"
+                            ImageUrl="~/images/abstract_0040_1280x960.jpg" Width="214px" />
+                    </div>
 
                 </div>
             </div>
-        </div>
+            </div>
+
+            
     </form>
+
 </body>
 </html>
